@@ -4,3 +4,372 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  --main-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'PressStart2P', sans-serif;
+  --accent-weight: 700;
+  --text-weight: 400;
+  --themes-main-color: #000;
+  --themes-background: #FFF;
+  --contour: #000;
+  --sparks: #FF0000;
+  --background: 
+  repeating-linear-gradient(transparent 0px, transparent 2px, #d3d3d3 2px, #d3d3d3 4px),
+  repeating-linear-gradient(to left, transparent 0px, transparent 2px, #d3d3d3 2px, #d3d3d3 4px),
+  repeating-linear-gradient(180deg, #E7E7E7 0.01%, #1A1A1A 100%);
+}
+
+:root.theme-dark {
+  --main-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'PressStart2P', sans-serif;
+  --text-weight: 465;
+  --header-weight: 785;
+  --themes-main-color: #00CC14;
+  --themes-background: #000;
+  --contour: #00CC14;
+  --sparks: #FF0000;
+  --background: 
+  repeating-linear-gradient(transparent 0px, transparent 2px, #000 2px, #000 4px),
+  repeating-linear-gradient(to left, transparent 0px, transparent 2px, #000 2px, #000 4px),
+  repeating-linear-gradient(180deg, #007F0C 0.01%, #004306 100%);
+
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font: 'Inter-Variable', sans-serif;
+    --accent-font: 'PressStart2P', sans-serif;
+    --text-weight: 465;
+    --header-weight: 785;
+    --themes-main-color: #00CC14;
+    --themes-background: #000;
+    --contour: #00CC14;
+    --sparks: #FF0000;
+    --background: 
+    repeating-linear-gradient(transparent 0px, transparent 2px, #000 2px, #000 4px),
+    repeating-linear-gradient(to left, transparent 0px, transparent 2px, #000 2px, #000 4px),
+    repeating-linear-gradient(180deg, #007F0C 0.01%, #004306 100%);
+  }
+
+  .header {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+    background: var(--themes-background, #000);
+  }
+
+  .theme-menu__button::after {
+    background-color: var(--themes-main-color);
+  }
+
+  .theme-menu__button:disabled {
+    color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-menu__button:disabled:before {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .card {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    background: var(--themes-background, #000);
+  }
+
+  .card__title {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--main-font, sans-serif);
+    font-weight: var(--accent-weight);
+  }
+
+  .label {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+    text-shadow:
+    -1px 0 var(--themes-background, #000), 
+    0 1px var(--themes-background, #000), 
+    1px 0 var(--themes-background, #000), 
+    0 -1px var(--themes-background, #000);
+  }
+
+  .paragraph {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--main-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .paragraph2 {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--main-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .card__icon-button:focus-visible {
+    outline: 2px solid var(--themes-main-color, #00CC14);
+  }
+
+  .card__icon-button:hover .core {
+    fill: var(--themes-main-color, #00CC14);
+  }
+  
+  .card__icon-button:hover .main-body {
+    fill: var(--themes-main-color, #00CC14);
+  }
+
+  .card__like-button {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    color: var(--themes-main-color, #00CC14);
+  }
+
+  .card__like-button:focus-visible {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    box-shadow: 2px 2px 0px var(--themes-main-color, #00CC14);
+  }
+
+  .card__like-button:hover .button__text {
+    color: inherit;
+  }
+
+  .card__like-button::after {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .card__like-button:hover::after {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .button__text {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .save-button {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    color: var(--themes-main-color, #00CC14);
+    background: var(--themes-background, #000);
+  }
+
+  .save-button:focus-visible {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    box-shadow: 2px 2px 0px var(--themes-main-color, #00CC14);
+  }
+
+  .save-button:hover .button__text {
+    color: inherit;
+  }
+
+  .save-button::after {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .save-button:hover::after {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .save-button:hover .floppy {
+    color: inherit;
+  }
+
+  .save__window-section {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    background-color: var(--themes-background, #000);
+  }
+
+  .save__window-icon {
+    color: var(--themes-main-color, #00CC14);
+  }
+
+  .save__button-text {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .save__button {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .save__button::before {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .save__button:hover .button__text {
+    color: inherit;
+  }
+}
+
+  .theme-dark .card__like-button:hover .button__text {
+    color: inherit;
+  }
+
+  .theme-dark .save-button:hover .button__text {
+    color: inherit;
+  }
+
+  .theme-dark .save-button:hover .floppy {
+    color: inherit;
+  }
+
+  .theme-dark .save__button:hover .button__text {
+    color: inherit;
+  }
+
+  .theme-dark .header {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+    background: var(--themes-background, #000);
+  }
+
+  .theme-dark .theme-menu__button::after {
+    background-color: var(--themes-main-color);
+  }
+
+  .theme-dark .theme-menu__button:disabled {
+    color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .theme-menu__button:disabled:before {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .theme-dark .card {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    background: var(--themes-background, #000);
+  }
+
+  .theme-dark .card__title {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--main-font, sans-serif);
+    font-weight: var(--accent-weight);
+  }
+
+  .theme-dark .label {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+    text-shadow:
+    -1px 0 var(--themes-background, #000), 
+    0 1px var(--themes-background, #000), 
+    1px 0 var(--themes-background, #000), 
+    0 -1px var(--themes-background, #000);
+  }
+
+  .theme-dark .paragraph {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--main-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .theme-dark .paragraph2 {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--main-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .theme-dark .card__icon-button:focus-visible {
+    outline: 2px solid var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .card__icon-button:hover .core {
+    fill: var(--themes-main-color, #00CC14);
+  }
+  
+  .theme-dark .card__icon-button:hover .main-body {
+    fill: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .card__like-button {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .card__like-button:focus-visible {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    box-shadow: 2px 2px 0px var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .card__like-button:hover .button__text {
+    color: inherit;
+  }
+
+  .theme-dark .card__like-button::after {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .card__like-button:hover::after {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .button__text {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .theme-dark .save-button {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    color: var(--themes-main-color, #00CC14);
+    background: var(--themes-background, #000);
+  }
+
+  .theme-dark .save-button:focus-visible {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    box-shadow: 2px 2px 0px var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .save-button:hover .button__text {
+    color: inherit;
+  }
+
+  .theme-dark .save-button::after {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .save-button:hover::after {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .save-button:hover .floppy {
+    color: inherit;
+  }
+
+  .theme-dark .save__window-section {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    background-color: var(--themes-background, #000);
+  }
+
+  .theme-dark .save__window-icon {
+    color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .save__button-text {
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .theme-dark .save__button {
+    border: 2px solid var(--themes-main-color, #00CC14);
+    color: var(--themes-main-color, #00CC14);
+    font-family: var(--accent-font, sans-serif);
+    font-weight: var(--text-weight);
+  }
+
+  .theme-dark .save__button::before {
+    background-color: var(--themes-main-color, #00CC14);
+  }
+
+  .theme-dark .save__button:hover .button__text {
+    color: inherit;
+  }

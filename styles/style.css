@@ -25,7 +25,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: var(--text-weight);
+  font-variation-settings: normal;
 }
 
 .header {

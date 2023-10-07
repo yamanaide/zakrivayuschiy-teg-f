@@ -95,6 +95,14 @@
     0 -1px var(--themes-background, #000);
   }
 
+  @supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+    .label {
+        -webkit-text-stroke: 1px #000000;
+        text-stroke: 1px #000000;
+        text-shadow: none;
+    }
+  } 
+
   .paragraph {
     color: var(--themes-main-color, #00CC14);
     font-family: var(--main-font, sans-serif);
@@ -204,22 +212,6 @@
     color: inherit;
   }
 }
-
-  .theme-dark .card__like-button:hover .button__text {
-    color: inherit;
-  }
-
-  .theme-dark .save-button:hover .button__text {
-    color: inherit;
-  }
-
-  .theme-dark .save-button:hover .floppy {
-    color: inherit;
-  }
-
-  .theme-dark .save__button:hover .button__text {
-    color: inherit;
-  }
 
   .theme-dark .header {
     border: 2px solid var(--themes-main-color, #00CC14);

@@ -25,7 +25,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--text-weight);
+  font-variation-settings: "wght";
 }
 
 .header {
@@ -38,7 +38,7 @@
   margin: 102px 0;
   border: 2px solid var(--themes-main-color, #000);
   color: var(--themes-main-color, #000);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-weight: var(--text-weight);
   font-style: normal;
   line-height: normal;
@@ -53,7 +53,7 @@
 
 .subheading {
   margin-bottom: 23px;
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.5375rem + 1.8vw, 1.4375rem);
 }
 
 .theme-menu__list {
@@ -73,6 +73,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .theme-menu__button::after {
@@ -86,6 +87,11 @@
 
 .theme-menu__button:focus {
   outline: none;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: opacity ease 0.3s;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -106,7 +112,7 @@
   margin-left: -20px;
   opacity: 0.6;
   color: var(--themes-main-color, #000);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-weight: var(--text-weight);
   font-size: 14px;
   font-style: normal;
@@ -145,6 +151,10 @@
   line-height: normal;
 }
 
+.first {
+  min-height: 50px;
+}
+
 .container {
   position: relative;
 }
@@ -156,7 +166,7 @@
   z-index: 2;
   opacity: 0.5;
   color: var(--themes-main-color, #000);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-weight: var(--text-weight);
   font-size: 14px;
   font-style: normal;
@@ -171,6 +181,8 @@
 
 .img {
   max-width: 100%;
+  border-top: 2px solid var(--themes-main-color, #000);
+  border-bottom: 2px solid var(--themes-main-color, #000);
 }
 
 .filter_brightness {
@@ -226,7 +238,6 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 10px;
   margin: 0 25px 25px 0;
 }
 
@@ -235,6 +246,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  margin-top: 2px;
 }
 
 .card__icon-button:focus-visible {
@@ -246,7 +258,6 @@
 .like-icon {
   width: 39px;
   height: 36px;
-  margin: 3px -10px 0 0;
 }
 
 .card__icon-button .core {
@@ -352,7 +363,7 @@
   position: relative;
   z-index: 2;
   color: var(--themes-main-color, #000);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-weight: var(--text-weight);
   font-size: 14px;
   font-style: normal;
@@ -363,7 +374,7 @@
   position: relative;
   width: 335px;
   height: 51px;
-  margin: 54px 0 105px;
+  margin-bottom: 105px;
   border: 2px solid var(--themes-main-color, #000);
   color: var(--themes-main-color, #000);
   background: var(--themes-background, #FFF);
@@ -411,7 +422,7 @@
   mix-blend-mode: difference;
 }
 
-.save__window {
+.save__window [open] {
   border: none;
   padding: 0;
 }
@@ -445,7 +456,7 @@
 
 .save__button-text {
   color: var(--themes-main-color, #000);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-weight: var(--text-weight);
   font-size: 14px;
   font-style: normal;
@@ -459,7 +470,7 @@
   min-height: 38px;
   border: 2px solid var(--themes-main-color, #000);
   color: var(--themes-main-color, #000);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-weight: var(--text-weight);
   font-size: 14px;
   font-style: normal;
@@ -468,6 +479,14 @@
   background: none;
   cursor: pointer;
   margin-top: -20px;
+  width: 100%;
+}
+
+.save__button:focus-visible {
+  border: 2px solid var(--themes-main-color, #000);
+  box-shadow: 2px 2px 0px var(--themes-main-color, #000);
+  outline: none;
+  transition: box-shadow ease 0.3s;
 }
 
 .save__button::before {
@@ -504,15 +523,14 @@
 
   .subheading {
     margin-bottom: 23px;
-    font-size: 14px;
   }
 
   .card {
     width: 371px;
   }
 
-  .card__title {
-    width: 351px;
+  .first {
+    width: 345px;
   }
 
   .save-button {
@@ -522,6 +540,13 @@
     justify-content: center;
     gap: 8px;
     width: 306px;
-    height: 80px;
+    height: 85px;
+    margin-top: -5px;
+  }
+
+  .floppy {
+    width: 28px;
+    height: 28px;
+    color: var(--themes-main-color, #000);
   }
 }

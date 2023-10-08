@@ -20,6 +20,22 @@
   repeating-linear-gradient(180deg, #E7E7E7 0.01%, #1A1A1A 100%);
 }
 
+.theme-light .card__like-button:hover .button__text {
+  color: var(--themes-background, #FFF);
+}
+
+.theme-light .save-button:hover .button__text {
+  color: var(--themes-background, #FFF);
+}
+
+.theme-light .save-button:hover .floppy {
+  color: var(--themes-background, #FFF);
+}
+
+.theme-light .save__button:hover .button__text {
+  color: var(--themes-background, #FFF);
+}
+
 :root.theme-dark {
   --main-font: 'Inter-Variable', sans-serif;
   --accent-font: 'PressStart2P', fantasy;
@@ -35,6 +51,7 @@
   repeating-linear-gradient(180deg, #007F0C 0.01%, #004306 100%);
 
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --main-font: 'Inter-Variable', sans-serif;
